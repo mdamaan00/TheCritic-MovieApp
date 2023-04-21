@@ -213,7 +213,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
               className={
                 commonInputClasses + " border-b-2 font-semibold text-xl"
               }
-              placeholder="Titanic"
+              placeholder="Enter Title"
             />
           </div>
 
