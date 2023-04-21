@@ -39,7 +39,7 @@ export default function ForgetPassword() {
             onChange={handleChange}
             value={email}
             label="Email"
-            placeholder="john@email.com"
+            placeholder="Enter Email"
             name="email"
           />
           <Submit value="Send Link" />
