@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { getPoster } from "../../utils/helper";
 import GridContainer from "../GridContainer";
+import { AnimationWrapper } from 'react-hover-animation';
 
 const trimTitle = (text = "") => {
   if (text.length <= 20) return text;
@@ -21,7 +22,7 @@ export default function MovieList({ title, movies = [] }) {
       ) : null}
       <GridContainer>
         {movies.map((movie) => {
-          return <ListItem key={movie.id} movie={movie} />;
+          return <AnimationWrapper><ListItem key={movie.id} movie={movie} /></AnimationWrapper>;
         })}
       </GridContainer>
     </div>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import { getTopRatedMovies } from "../../api/movie";
 import { useNotification } from "../../hooks";
-import GridContainer from "../GridContainer";
 import MovieList from "./MovieList";
 
 export default function TopRatedWebSeries() {
@@ -24,5 +23,5 @@ export default function TopRatedWebSeries() {
     };
   }, []);
 
-  return <MovieList movies={movies} title="Viewers choice (Web Series)" />;
+  return <MovieList movies={movies} title="Featured Web Series" />;
 }
