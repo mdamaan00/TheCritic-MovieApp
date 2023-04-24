@@ -24,15 +24,40 @@ export default function HeroSlidShow() {
       abortController.current.abort();
     };
   }, []);
-  
-  var settings = {
-    dots: false,
+
+  const settings = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    arrows: true,
+    autoplay:true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
+
+  function NextArrow(props) {
+    const { onClick } = props;
+    return (
+      <button
+        className="absolute right-4 top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:bg-opacity-75 bg-opacity-60 text-white font-bold py-2 px-4 rounded-full focus:outline-none"
+        onClick={onClick}
+      >
+        {'>'}
+      </button>
+    );
+  }
+
+  function PrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <button
+        className="absolute top-1/2 left-4 z-10 transform -translate-y-1/2 bg-gray-500 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:bg-opacity-75 bg-opacity-60 text-white font-bold py-2 px-4 rounded-full focus:outline-none"
+        onClick={onClick}
+      >
+        {'<'}
+      </button>
+    );
+  }
+
 
   return (
 
