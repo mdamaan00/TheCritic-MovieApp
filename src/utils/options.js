@@ -28,4 +28,5 @@ export const languageOptions = [
   { title: "Spanish", value: "Spanish" },
   { title: "Tamil", value: "Tamil" },
   { title: "Telugu", value: "Telugu" },
+  { title: "Arabic", value: "Arabic"}
 ];

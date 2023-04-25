@@ -160,7 +160,7 @@ export default function SingleMovie() {
             <CustomButtonLink label={type} clickable={false} />
           </ListWithLabel>
 
-          <CastProfiles cast={cast} />
+          <CastProfiles cast={cast} onProfileClick={handleProfileClick} />
           <RelatedMovies movieId={movieId} />
         </div>
       </Container>
@@ -209,8 +209,7 @@ const CastProfiles = ({ cast, onProfileClick }) => {
                 src={profile.avatar}
                 alt=""
               />
-
-              <CustomButtonLink label={profile.name} />
+              <CustomButtonLink label={profile.name} onClick={() => onProfileClick(profile)} />
               <span className="text-light-subtle dark:text-dark-subtle text-sm">
                 as
               </span>
