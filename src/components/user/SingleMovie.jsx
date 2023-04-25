@@ -1,4 +1,6 @@
+import { max } from "lodash";
 import React, { useEffect, useState } from "react";
+import { BsFullscreen, BsPause, BsPauseBtn } from "react-icons/bs";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getSingleMovie } from "../../api/movie";
 import { useAuth, useNotification } from "../../hooks";
@@ -90,7 +92,7 @@ export default function SingleMovie() {
   return (
     <div className="dark:bg-primary bg-white min-h-screen pb-10">
       <Container className="xl:px-0 px-2">
-        <video poster={poster} controls src={trailer}></video>
+        <video poster={poster} width={"100%"} controls autoPlay src={trailer}></video>
         <div className="flex justify-between">
           <h1 className="xl:text-4xl lg:text-3xl text-2xl  text-highlight dark:text-highlight-dark font-semibold py-3">
             {title}

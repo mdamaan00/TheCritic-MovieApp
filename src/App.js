@@ -13,6 +13,7 @@ import AdminNavigator from "./navigator/AdminNavigator";
 import SingleMovie from "./components/user/SingleMovie";
 import MovieReviews from "./components/user/MovieReviews";
 import SearchMovies from "./components/user/SearchMovies";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   const { authInfo } = useAuth();
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth/signin" element={<Signin />} />
